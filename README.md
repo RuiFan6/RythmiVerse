@@ -1,12 +1,41 @@
 ## Contribution Guidelines
 
-To maintain the integrity of the main branch, direct push access is restricted. Contributors are encouraged to follow a branch-based workflow, submitting changes through pull requests (PRs) for review. This process ensures that all code is reviewed and tested before it's merged into the main branch, helping to maintain high code quality and stability.
+To safeguard the quality and integrity of the `main` branch, we enforce restricted push access. All contributors must adhere to a branch-based workflow, pushing their changes via pull requests (PRs). This mandatory review process ensures that every contribution is thoroughly vetted and tested before integration, thereby upholding the project's code quality and stability.
 
-### Making Changes
+### Workflow for Making Contributions
 
-1. Create a new branch from the latest version of `main`.
-2. Make your changes, commit them to your branch, and push the branch to the repository.
-3. Open a pull request from your branch to the main branch.
-4. Ensure your pull request passes all automated checks and receives approval from at least one project maintainer.
+1. **Fork and Clone:**
+   Begin by forking the repository. Once forked, clone it to your local machine.
 
-Thank you for contributing to our project! Your efforts help us build a better application for everyone.
+2. **Set Upstream Remote:**
+   Establish a link to the original repository by adding it as an upstream remote with the following command:
+   ```sh
+   git remote add upstream git@github.com:Aarsh2001/RythmiVerse.git
+   ```
+
+3. **Branch Off from `main`:**
+   Ensure you're working with the latest `main` branch. Create a new feature or fix branch:
+   ```sh
+   git checkout -b <your-branch-name>
+   ```
+
+4. **Implement Your Changes:**
+   After making your changes locally, stage them for commit:
+   ```sh
+   git add . // or specific filename
+   ```
+   Commit your changes with a descriptive message:
+   ```sh
+   git commit -m "<your-commit-message>"
+   ```
+
+5. **Push to Your Fork:**
+   Push your branch and changes to your fork on GitHub:
+   ```sh
+   git push origin <your-branch-name>
+   ```
+
+6. **Create a Pull Request:**
+   Navigate to the original repository and open a pull request from your recently pushed branch against the `main` branch. Ensure your PR description clearly describes the changes and any other pertinent details.
+
+Your adherence to these guidelines is greatly appreciated and vital in helping us create a stellar application together. Thank you for your contributions!
