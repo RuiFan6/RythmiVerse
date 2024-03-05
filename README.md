@@ -35,6 +35,8 @@ To uphold the quality and consistency of the `RhythmiVerse` codebase, we've impl
 6. **Open a Pull Request:**
    When you're ready to merge your changes into the `main` branch, create a pull request (PR) from your branch on GitHub. Include a detailed description of your changes.
 
+**Note** -: All application related files should be put inside `Assets` folder. Before making any changes, please go through the [directory structure](https://github.com/Aarsh2001/RythmiVerse/tree/main/Assets) and add your files accordingly !
+
 ### Linking PRs to Todo Lists
 
 Our Todo lists are located in the repository under `ProjectManagement/TodoLists/README.md`. Each weekly [Todo list](https://github.com/Aarsh2001/RythmiVerse/blob/main/ProjectManagement/TodoLists/README.md) has a corresponding issue number in our repository's Issues.
@@ -47,7 +49,5 @@ Meeting Notes can be found under `Documentation/MeetingNotes/`. They are named f
 
 - To update Meeting Notes, please edit the relevant `Week_X_Notes.txt` file with your updates. If you're adding new notes for a meeting, ensure to follow the naming convention and place the file in the correct directory.
 - Commit your changes to the notes with a clear message describing the update, then push the changes to your branch and create a PR to merge them into `main`. In your PR, please briefly describe the meeting's highlights and any decisions made.
-
-**Note** -: All application related files should be put inside `Assets` folder. Before making any changes, please go through the [directory structure](https://github.com/Aarsh2001/RythmiVerse/tree/main/Assets) and add your files accordingly !
 
 Thank you for your commitment to contributing to `RhythmiVerse`. Your collaborative efforts are what make this project a success.
