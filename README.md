@@ -37,7 +37,7 @@ To uphold the quality and consistency of the `RhythmiVerse` codebase, we've impl
 
 ### Linking PRs to Todo Lists
 
-Our Todo lists are located in the repository under `ProjectManagement/TodoLists/README.md`. Each weekly Todo list has a corresponding issue number in our repository's Issues.
+Our Todo lists are located in the repository under `ProjectManagement/TodoLists/README.md`. Each weekly [Todo list](https://github.com/Aarsh2001/RythmiVerse/blob/main/ProjectManagement/TodoLists/README.md) has a corresponding issue number in our repository's Issues.
 
 - When creating PRs that address tasks from the Todo lists, please ensure that you reference the appropriate issue number in your PR description by including `Fixes #issue_number`. This allows us to automatically link your PR to the issue and mark it as complete upon the PR's merge.
 
