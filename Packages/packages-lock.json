@@ -1,5 +1,12 @@
 {
   "dependencies": {
+    "com.ucl.ubiq": {
+      "version": "https://github.com/UCL-VR/ubiq.git#upm",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "774d3abec29a9faf670a3a02f41ef985f7327f21"
+    },
     "com.unity.collab-proxy": {
       "version": "2.3.1",
       "depth": 0,
