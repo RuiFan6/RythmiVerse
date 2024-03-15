@@ -14,6 +14,6 @@ public class OffsetInteractable : XRGrabInteractable
     {
         bool isDirect = interactor is XRRayInteractor;
         attachTransform.position = isDirect ? interactor.attachTransform.position : transform.position;
-        //attachTransform.rotation = isDirect ? interactor.attachTransform.rotation : transform.rotation;
+        attachTransform.rotation = isDirect ? interactor.attachTransform.rotation : transform.rotation;
     }
 }
