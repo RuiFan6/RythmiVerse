@@ -262,7 +262,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &22960317
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1894,11 +1894,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -279155951549711497, guid: 7912493737021bf48ad8d0570ccf98e5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.177
+      value: -0.1541
       objectReference: {fileID: 0}
     - target: {fileID: -279155951549711497, guid: 7912493737021bf48ad8d0570ccf98e5, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.016
+      value: 0.0203
       objectReference: {fileID: 0}
     - target: {fileID: 641220550152679012, guid: 7912493737021bf48ad8d0570ccf98e5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1950,15 +1950,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1327719705977949510, guid: 7912493737021bf48ad8d0570ccf98e5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.0008
+      value: -0.0197
       objectReference: {fileID: 0}
     - target: {fileID: 1327719705977949510, guid: 7912493737021bf48ad8d0570ccf98e5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.0146
+      value: 0.0026
       objectReference: {fileID: 0}
     - target: {fileID: 1327719705977949510, guid: 7912493737021bf48ad8d0570ccf98e5, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.0899
+      value: -0.0875
       objectReference: {fileID: 0}
     - target: {fileID: 1327719705977949510, guid: 7912493737021bf48ad8d0570ccf98e5, type: 3}
       propertyPath: m_LocalRotation.w
@@ -8702,7 +8702,7 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: 106e40de007af415eae3ca30f6583127, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
-  m_Pitch: 1
+  m_Pitch: 1.5
   Loop: 0
   Mute: 0
   Spatialize: 0
@@ -15835,7 +15835,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!143 &1884130423
 CharacterController:
   m_ObjectHideFlags: 0
