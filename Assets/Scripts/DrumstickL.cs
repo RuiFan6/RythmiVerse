@@ -9,7 +9,7 @@ public class DrumstickL : MonoBehaviour
     private NetworkContext context;
 
     // Public variable to manually assign ownership for testing
-    public bool isOwnerForTesting = true;
+    public bool isOwnerForTesting;
 
     private struct DrumstickMessage
     {
