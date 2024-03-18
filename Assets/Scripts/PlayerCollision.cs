@@ -2,115 +2,33 @@ using UnityEngine;
 
 public class PlayerCollision : MonoBehaviour
 {
-    Animator animator;
-    AudioSource aud;
-
-    void OnCollisionEnter(Collision collisionInfo) 
+    void OnCollisionEnter(Collision collisionInfo)
     {
-        if (collisionInfo.gameObject.tag == "snare_tom")
+        // Define all tags you're interested in
+        string[] tagsOfInterest = new string[] { "snare_tom", "floor_tom", "rack_tom1", "rack_tom2", "ride_symbal1", "ride_symbal2", "hi_hat" };
+
+        // Check if the collided object's tag is one of the tags of interest
+        foreach (var tag in tagsOfInterest)
         {
-            //Debug.Log("1");
-            animator = collisionInfo.gameObject.GetComponent<Animator>();
-            aud = collisionInfo.gameObject.GetComponent<AudioSource>();
-            if (animator != null) 
+            if (collisionInfo.gameObject.tag == tag)
             {
-                animator.SetTrigger("hit");
-            }
-            if (aud != null)
-            {
-                aud.Play();
+                // Get the Animator and AudioSource components
+                Animator animator = collisionInfo.gameObject.GetComponent<Animator>();
+                AudioSource aud = collisionInfo.gameObject.GetComponent<AudioSource>();
+
+                // Trigger the animation and play the sound if components are found
+                if (animator != null)
+                {
+                    animator.SetTrigger("hit");
+                }
+                if (aud != null)
+                {
+                    aud.Play();
+                }
+
+                // Since we found a match, no need to continue checking other tags
+                break;
             }
         }
-
-        if (collisionInfo.gameObject.tag == "floor_tom")
-        {
-            //Debug.Log("2");
-            animator = collisionInfo.gameObject.GetComponent<Animator>();
-            aud = collisionInfo.gameObject.GetComponent<AudioSource>();
-            if (animator != null) 
-            {
-                animator.SetTrigger("hit");
-            }
-            if (aud != null)
-            {
-                aud.Play();
-            }
-        }
-
-        if (collisionInfo.gameObject.tag == "rack_tom1")
-        {
-            //Debug.Log("3");
-            animator = collisionInfo.gameObject.GetComponent<Animator>();
-            aud = collisionInfo.gameObject.GetComponent<AudioSource>();
-            if (animator != null) 
-            {
-                animator.SetTrigger("hit");
-            }
-            if (aud != null)
-            {
-                aud.Play();
-            }
-        }
-
-        if (collisionInfo.gameObject.tag == "rack_tom2")
-        {
-            //Debug.Log("4");
-            animator = collisionInfo.gameObject.GetComponent<Animator>();
-            aud = collisionInfo.gameObject.GetComponent<AudioSource>();
-            if (animator != null) 
-            {
-                animator.SetTrigger("hit");
-            }
-            if (aud != null)
-            {
-                aud.Play();
-            }
-        }
-
-        if (collisionInfo.gameObject.tag == "ride_symbal1")
-        {
-            //Debug.Log("5");
-            animator = collisionInfo.gameObject.GetComponent<Animator>();
-            aud = collisionInfo.gameObject.GetComponent<AudioSource>();
-            if (animator != null) 
-            {
-                animator.SetTrigger("hit");
-            }
-            if (aud != null)
-            {
-                aud.Play();
-            }
-        }
-
-        if (collisionInfo.gameObject.tag == "ride_symbal2")
-        {
-            //Debug.Log("6");
-            animator = collisionInfo.gameObject.GetComponent<Animator>();
-            aud = collisionInfo.gameObject.GetComponent<AudioSource>();
-            if (animator != null) 
-            {
-                animator.SetTrigger("hit");
-            }
-            if (aud != null)
-            {
-                aud.Play();
-            }
-        }
-
-        if (collisionInfo.gameObject.tag == "hi_hat")
-        {
-            //Debug.Log("7");
-            animator = collisionInfo.gameObject.GetComponent<Animator>();
-            aud = collisionInfo.gameObject.GetComponent<AudioSource>();
-            if (animator != null) 
-            {
-                animator.SetTrigger("hit");
-            }
-            if (aud != null)
-            {
-                aud.Play();
-            }
-        }
-
     }
 }
