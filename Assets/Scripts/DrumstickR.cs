@@ -12,9 +12,6 @@ public class DrumstickR : MonoBehaviour
 
     private DrumKitManager manager;
 
-
-
-
     // Start is called before the first frame update
     void Start()
     {

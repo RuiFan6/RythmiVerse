@@ -13553,11 +13553,11 @@ MonoBehaviour:
   m_AngularVelocityScale: 1
   m_TrackPosition: 1
   m_SmoothPosition: 1
-  m_SmoothPositionAmount: 8
+  m_SmoothPositionAmount: 15.07
   m_TightenPosition: 0.1
   m_TrackRotation: 1
   m_SmoothRotation: 1
-  m_SmoothRotationAmount: 8
+  m_SmoothRotationAmount: 15.79
   m_TightenRotation: 0.1
   m_TrackScale: 1
   m_SmoothScale: 0
