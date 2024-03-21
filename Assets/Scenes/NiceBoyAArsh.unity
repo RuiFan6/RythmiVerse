@@ -3357,7 +3357,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -634564030702048633, guid: 7912493737021bf48ad8d0570ccf98e5, type: 3}
       propertyPath: m_TagString
-      value: ride_symbal2
+      value: crash
       objectReference: {fileID: 0}
     - target: {fileID: -611963304495246656, guid: 7912493737021bf48ad8d0570ccf98e5, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3413,7 +3413,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1268831095093775304, guid: 7912493737021bf48ad8d0570ccf98e5, type: 3}
       propertyPath: m_TagString
-      value: ride_symbal1
+      value: ride
       objectReference: {fileID: 0}
     - target: {fileID: 1327719705977949510, guid: 7912493737021bf48ad8d0570ccf98e5, type: 3}
       propertyPath: m_LocalScale.x
@@ -9724,7 +9724,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6598815579406187037, guid: 18ddb545287c546e19cc77dc9fbb2189, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6598815579406187037, guid: 18ddb545287c546e19cc77dc9fbb2189, type: 3}
       propertyPath: m_TagString
@@ -18502,6 +18502,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1731467569171809127, guid: 46c1f5d5a11cf5042886aabd56e7b9d7, type: 3}
+      propertyPath: avatarPrefab
+      value: 
+      objectReference: {fileID: 4593948419484860711, guid: 9bb67ffc85fecdc4da7068f6879c1846, type: 3}
+    - target: {fileID: 1731467569171809127, guid: 46c1f5d5a11cf5042886aabd56e7b9d7, type: 3}
+      propertyPath: avatarCatalogue
+      value: 
+      objectReference: {fileID: 11400000, guid: ac710d4a2a9c23545a9b1a0f624d06ca, type: 2}
     - target: {fileID: 1731467569171809127, guid: 46c1f5d5a11cf5042886aabd56e7b9d7, type: 3}
       propertyPath: hints.serializedProviders.instructions.Array.size
       value: 6
