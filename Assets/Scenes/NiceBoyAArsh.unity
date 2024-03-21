@@ -2612,10 +2612,10 @@ PrefabInstance:
       addedObject: {fileID: 1611348150}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 1ccf6bcde194da5428c16608c3070358, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1611348149}
+      addedObject: {fileID: 1611348148}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 1ccf6bcde194da5428c16608c3070358, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1611348148}
+      addedObject: {fileID: 1611348155}
   m_SourcePrefab: {fileID: 100100000, guid: 1ccf6bcde194da5428c16608c3070358, type: 3}
 --- !u!1 &301930252
 GameObject:
@@ -14383,18 +14383,6 @@ MonoBehaviour:
   m_StartingSingleGrabTransformers: []
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
---- !u!114 &1611348149
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1611348147}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 89d513e22560cd747b0bd165fba002b7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1611348150
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14474,6 +14462,18 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 1ccf6bcde194da5428c16608c3070358, type: 3}
   m_PrefabInstance: {fileID: 296514641}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1611348155
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1611348147}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c927e87f1d2959f48904c8b36d91ce90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1614634184
 GameObject:
   m_ObjectHideFlags: 0
