@@ -7,7 +7,7 @@ public class BaseDrum : MonoBehaviour
     private AudioSource aud;
     private Animator anim;
     public InputActionReference toggleReference = null;
-    public GameObject DrumstickR;
+    public GameObject RayR;
     
     void Start()
     {
@@ -27,7 +27,7 @@ public class BaseDrum : MonoBehaviour
     private void Toggle(InputAction.CallbackContext context)
     {
         
-        if (DrumstickR.activeSelf)
+        if (RayR.activeSelf == false)
         {
             //Debug.Log("base drum !");
             anim.SetTrigger("hit");
