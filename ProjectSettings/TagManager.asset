@@ -11,6 +11,9 @@ TagManager:
   - ride_symbal1
   - ride_symbal2
   - hi_hat
+  - Teleport
+  - ride
+  - crash
   layers:
   - Default
   - TransparentFX

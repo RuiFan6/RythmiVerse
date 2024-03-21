@@ -9,34 +9,31 @@ public class PlayerCollision : MonoBehaviour
 {
     NetworkContext context;
 
-     // Define all tags you're interested in
-     string[] tagsOfInterest = new string[] { "snare_tom", "floor_tom", "rack_tom1", "rack_tom2", "ride_symbal1", "ride_symbal2", "hi_hat" };
+    // Define all tags 
+    string[] tagsOfInterest = new string[] { "snare_tom", "floor_tom", "rack_tom1", "rack_tom2", "crash", "ride", "hi_hat" };
 
-    void start(){
+    void Start() // Corrected from 'void start()'
+    {
         context = NetworkScene.Register(this);
     }
+
     private struct SoundMessage
     {
         public string tagOfHitObject;
-        // public int token; // Token for ownership logic
     }
+
     void OnCollisionEnter(Collision collisionInfo)
     { 
-        // Check if the collided object's tag is one of the tags of interest
         foreach (var tag in tagsOfInterest)
         {
             if (collisionInfo.gameObject.tag == tag)
             {
-              
-                // Get the Animator and AudioSource components
                 Animator animator = collisionInfo.gameObject.GetComponent<Animator>();
                 AudioSource aud = collisionInfo.gameObject.GetComponent<AudioSource>();
 
-                // Trigger the animation and play the sound if components are found
                 if (animator != null)
                 {
                     animator.SetTrigger("hit");
-
                 }
                 if (aud != null)
                 {
@@ -44,25 +41,25 @@ public class PlayerCollision : MonoBehaviour
                     var soundMessage = new SoundMessage { tagOfHitObject = tag };
                     context.SendJson(soundMessage);
                 }
-
-                // Since we found a match, no need to continue checking other tags
                 break;
             }
         }
     }
+
     public void ProcessMessage(ReferenceCountedSceneGraphMessage message)
-    {
+    {   
         var soundMessage = message.FromJson<SoundMessage>();
-        GameObject[] objectsWithTag = GameObject.FindGameObjectsWithTag(soundMessage.tagOfHitObject);
-        foreach (var obj in objectsWithTag)
+        Debug.Log($"Received sound trigger for tag: {soundMessage.tagOfHitObject}");
+        GameObject[] obj = GameObject.FindGameObjectsWithTag(soundMessage.tagOfHitObject);
+        AudioSource aud = obj[0].GetComponent<AudioSource>();
+        Animator animator = obj[0].GetComponent<Animator>();
+        if (aud != null)
         {
-            AudioSource aud = obj.GetComponent<AudioSource>();
-            if (aud != null)
-            {
-                aud.Play();
-                break; // Assuming you only want to play the sound once for each message.
-            }
+            aud.Play();
         }
-        
-    }
+        if (animator != null)
+        {
+            animator.SetTrigger("hit");
+        } 
+ }
 }
