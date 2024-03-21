@@ -1,12 +1,14 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class ControllerManage : MonoBehaviour
+public class ToggleRays : MonoBehaviour
 {
-    public GameObject teleportationRay_L;
-    public GameObject teleportationRay_R;
-    public GameObject drumstick_L;
-    public GameObject drumstick_R;
+    public GameObject ray_L;
+    public GameObject ray_R;
+    //public GameObject drumstick_L;
+    //public GameObject drumstick_R;
+    private bool enabled_L = false;
+    private bool enabled_R = false; 
     public InputActionReference toggleReference_L = null;
     public InputActionReference toggleReference_R = null;
     void Start()
@@ -27,29 +29,33 @@ public class ControllerManage : MonoBehaviour
 
     private void ToggleL(InputAction.CallbackContext context)
     {
-        if (drumstick_L.activeSelf)
+        if (enabled_L)
         {
-            drumstick_L.SetActive(false);
-            teleportationRay_L.SetActive(true);
+            //drumstick_L.SetActive(false);
+            ray_L.SetActive(false);
+            enabled_L = false;
         }
         else
         {
-            drumstick_L.SetActive(true);
-            teleportationRay_L.SetActive(false);
+            //drumstick_L.SetActive(true);
+            ray_L.SetActive(true);
+            enabled_L = true;
         }
     }
 
     private void ToggleR(InputAction.CallbackContext context)
     {
-        if (drumstick_R.activeSelf)
+        if (enabled_R)
         {
-            drumstick_R.SetActive(false);
-            teleportationRay_R.SetActive(true);
+            //drumstick_R.SetActive(false);
+            ray_R.SetActive(false);
+            enabled_R = false;
         }
         else
         {
-            drumstick_R.SetActive(true);
-            teleportationRay_R.SetActive(false);
+            //drumstick_R.SetActive(true);
+            ray_R.SetActive(true);
+            enabled_R = true;
         }
     }
 }
