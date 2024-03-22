@@ -14,6 +14,9 @@ TagManager:
   - Teleport
   - ride
   - crash
+  - clone
+  - base_drum
+
   layers:
   - Default
   - TransparentFX
@@ -21,8 +24,8 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
+  - teacher_drum
+  - student_drum
   - 
   - 
   - 
