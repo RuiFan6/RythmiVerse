@@ -1,9 +1,36 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.InputSystem;
 
 public class TrafficLight : MonoBehaviour
 {
+    public bool isTeacher = true;
+    public InputActionReference toggleReference = null;
+    public GameObject drumstikcR;
+    private GameObject teacherBaseDrum;
+
+
+
+    void Start()
+    {
+        teacherBaseDrum = FindObjectByTagAndLayer("base_drum", "teacher_drum");
+    }
+
+    GameObject FindObjectByTagAndLayer(string tag, string layerName)
+    {
+        int layer = LayerMask.NameToLayer(layerName);
+        GameObject[] objectsWithTag = GameObject.FindGameObjectsWithTag(tag);
+        foreach (GameObject obj in objectsWithTag)
+        {
+            if (obj.layer == layer)
+            {
+                return obj; // Return the first found object
+            }
+        }
+        return null; // Return null if no object found
+    }
+
     void OnCollisionEnter(Collision collisionInfo)
     {
         List<string> drumPartTags = new List<string>
@@ -19,12 +46,36 @@ public class TrafficLight : MonoBehaviour
 
         foreach (var tag in drumPartTags)
         {
-            if (collisionInfo.gameObject.tag == tag)
+
+            if (collisionInfo.gameObject.tag == tag && collisionInfo.gameObject.layer == LayerMask.NameToLayer("teacher_drum"))
+
             {
                 CreateAndModifyClone(collisionInfo.gameObject);
             }
         }
     }
+
+
+    private void Awake()
+    {
+        toggleReference.action.started += Toggle;
+    }
+
+    private void OnDestroy() 
+    {
+        toggleReference.action.started -= Toggle;
+    }
+
+    private void Toggle(InputAction.CallbackContext context)
+    {
+        
+        if (drumstikcR.activeSelf && isTeacher)
+        {
+            //Debug.Log("base drum !");
+            CreateAndModifyClone(teacherBaseDrum);
+        }
+    }
+
 
     private void CreateAndModifyClone(GameObject original)
     {
@@ -41,7 +92,9 @@ public class TrafficLight : MonoBehaviour
         if (destination != null)
         {
             // Adjust this call to pass the destination GameObject
-            float moveSpeed = 1.0f; // Adjust this speed as necessary
+
+            float moveSpeed = 0.5f; // Adjust this speed as necessary
+
             StartCoroutine(MoveObjectToDestination(clone, destination, moveSpeed));
         }
     }
@@ -99,9 +152,17 @@ public class TrafficLight : MonoBehaviour
 
     private void DisableComponents(GameObject clone)
     {
+        // Collect all MonoBehaviour components to remove
+        List<MonoBehaviour> scripts = new List<MonoBehaviour>(clone.GetComponents<MonoBehaviour>());
+        foreach (MonoBehaviour script in scripts)
+        {
+            Destroy(script); // Remove the script component
+        }
+
+        // Disable or modify other components as before
         foreach (Component component in clone.GetComponents<Component>())
         {
-            if (!(component is MeshRenderer))
+            if (!(component is MeshRenderer) && !(component is MonoBehaviour)) // Exclude MonoBehaviour since they are handled above
             {
                 if (component is Behaviour)
                 {
@@ -119,6 +180,8 @@ public class TrafficLight : MonoBehaviour
                 }
             }
         }
+
+
         ChangeColorToOrangeAndTransparent(clone);
     }
 

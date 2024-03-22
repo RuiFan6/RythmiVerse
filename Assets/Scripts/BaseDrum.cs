@@ -8,6 +8,7 @@ public class BaseDrum : MonoBehaviour
     private Animator anim;
     public InputActionReference toggleReference = null;
     public GameObject RayR;
+    public bool isTeacher;
     
     void Start()
     {
@@ -26,12 +27,24 @@ public class BaseDrum : MonoBehaviour
 
     private void Toggle(InputAction.CallbackContext context)
     {
-        
-        if (RayR.activeSelf == false)
+        if (gameObject.layer == LayerMask.NameToLayer("teacher_drum") && isTeacher)
         {
-            //Debug.Log("base drum !");
-            anim.SetTrigger("hit");
-            aud.Play();
+            if (RayR.activeSelf == false)
+            {
+                //Debug.Log("base drum !");
+                anim.SetTrigger("hit");
+                aud.Play();
+            }
         }
+        if (gameObject.layer == LayerMask.NameToLayer("student_drum") && isTeacher == false)
+        {
+            if (RayR.activeSelf == false)
+            {
+                //Debug.Log("base drum !");
+                anim.SetTrigger("hit");
+                aud.Play();
+            }
+        }
+        
     }
 }
