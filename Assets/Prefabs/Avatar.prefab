@@ -206,6 +206,10 @@ PrefabInstance:
       propertyPath: handToVibrate
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8146958762386921805, guid: 03db70ebde5063444b694fb52e2adcdf, type: 3}
+      propertyPath: handToVibrate
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8896835764994750622, guid: 03db70ebde5063444b694fb52e2adcdf, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0
@@ -279,7 +283,7 @@ MonoBehaviour:
   isTeacher: 1
   toggleReference: {fileID: 187161793506945269, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   drumstikcR: {fileID: 3302529125661557370}
---- !u!1001 &6766879369957777502
+
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -348,17 +352,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8896835764994750622, guid: 03db70ebde5063444b694fb52e2adcdf, type: 3}
   m_PrefabInstance: {fileID: 6766879369957777502}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &3302529125661557370 stripped
+
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8087400952454242852, guid: 03db70ebde5063444b694fb52e2adcdf, type: 3}
   m_PrefabInstance: {fileID: 6766879369957777502}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &5789724072125610659 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 986837736899189501, guid: 03db70ebde5063444b694fb52e2adcdf, type: 3}
-  m_PrefabInstance: {fileID: 6766879369957777502}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2973818654360975870
+
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -370,10 +369,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6047ef9a7028dc344a20afb22a468a4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+
   isTeacher: 1
   toggleReference: {fileID: 187161793506945269, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   drumstikcR: {fileID: 3302529125661557370}
---- !u!1001 &7388432696458026923
+
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2

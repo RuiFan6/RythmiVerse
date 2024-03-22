@@ -31,13 +31,6 @@ public class TrafficLight : MonoBehaviour
         return null; // Return null if no object found
     }
 
-
-
-
-
-
-
-
     void OnCollisionEnter(Collision collisionInfo)
     {
         List<string> drumPartTags = new List<string>
@@ -53,13 +46,14 @@ public class TrafficLight : MonoBehaviour
 
         foreach (var tag in drumPartTags)
         {
+
             if (collisionInfo.gameObject.tag == tag && collisionInfo.gameObject.layer == LayerMask.NameToLayer("teacher_drum"))
+
             {
                 CreateAndModifyClone(collisionInfo.gameObject);
             }
         }
     }
-
 
 
     private void Awake()
@@ -83,11 +77,6 @@ public class TrafficLight : MonoBehaviour
     }
 
 
-
-
-
-
-
     private void CreateAndModifyClone(GameObject original)
     {
         GameObject clone = Instantiate(original, original.transform.position, original.transform.rotation);
@@ -103,7 +92,9 @@ public class TrafficLight : MonoBehaviour
         if (destination != null)
         {
             // Adjust this call to pass the destination GameObject
+
             float moveSpeed = 0.5f; // Adjust this speed as necessary
+
             StartCoroutine(MoveObjectToDestination(clone, destination, moveSpeed));
         }
     }
@@ -189,6 +180,7 @@ public class TrafficLight : MonoBehaviour
                 }
             }
         }
+
 
         ChangeColorToOrangeAndTransparent(clone);
     }
